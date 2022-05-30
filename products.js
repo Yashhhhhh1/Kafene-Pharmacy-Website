@@ -6,6 +6,11 @@ let data = [];
 let filterOptions = document.querySelectorAll(".filter-options")
 
 
+$.get("https://5fc1a1c9cb4d020016fe6b07.mockapi.io/api/v1/products")
+.then(res=>{
+    localStorage.setItem("Products Data", JSON.stringify(res));
+})
+
 let lowStockOption = true;
 let expiryOption = true;
 

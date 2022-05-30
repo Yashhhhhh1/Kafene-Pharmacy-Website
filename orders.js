@@ -15,6 +15,11 @@ if (JSON.parse(localStorage.getItem("login")) == true) {
 navOptions.forEach(item => item.classList.remove("active"));
 document.getElementById("ordersPage").classList.add("active");
 
+$.get("https://5fc1a1c9cb4d020016fe6b07.mockapi.io/api/v1/orders")
+.then(res=>{
+    localStorage.setItem("Orders Data", JSON.stringify(res));
+})
+
 logoutBtn.addEventListener("click", () => {
     localStorage.setItem("login", false);
     location.assign("./index.html")
