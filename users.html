@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="./index.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Kafene Pharmacy | Users</title>
+</head>
+
+<body>
+    <header>
+        <span id="logo">
+            <img id="logo-img" src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png" alt="logo" />
+            <a id="comp-name">Kafene</a>
+        </span>
+        <nav>
+            <a id="ordersPage" class="nav-options" href="./orders.html">Orders</a>
+            <a id="productsPage" class="nav-options" href="./products.html">Products</a>
+            <a id="usersPage" class="nav-options" href="./users.html">Users</a>
+        </nav>
+        <button id="logout-btn">Logout</button>
+    </header>
+
+    <main style="margin: 100px 100px">
+        <h1 id="users-title">Users</h1>
+
+        <input id="search-box" type="text" placeholder="Search by Name"/> <button id="reset-btn">Reset</button>
+
+        <table id="users-page-table">
+            <thead>
+                <tr>
+                    <td id="id"><b>ID</b></td>
+                    <td id="userAvatar"><b>user Avatar</b></td>
+                    <td id="fullName"><b>Full Name</b></td>
+                    <td id="dob"><b>DoB</b></td>
+                    <td id="gender"><b>Gender</b></td>
+                    <td id="currentLocation"><b>Current Location</b></td>
+                </tr>
+            </thead>
+            <tbody id="users-details">
+
+            </tbody>
+        </table>
+    </main>
+</body>
+<script src="./users.js"></script>
+
+</html>

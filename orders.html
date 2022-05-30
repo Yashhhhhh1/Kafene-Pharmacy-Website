@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="./index.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Kafene Pharmacy | Orders</title>
+</head>
+<body>
+    <header>
+        <span id="logo">
+            <img id="logo-img" src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png" alt="logo"/>
+            <a id="comp-name">Kafene</a>
+        </span>
+        <nav>
+            <a id="ordersPage" class="nav-options" href="./orders.html">Orders</a>
+            <a id="productsPage" class="nav-options" href="./products.html">Products</a>
+            <a id="usersPage" class="nav-options" href="./users.html">Users</a>
+        </nav>
+        <button id="logout-btn">Logout</button>
+    </header>
+    <main style="margin-top: 100px; padding-left: 150px;" >
+        <h1 id="orders-title">Orders</h1>
+        <div id="filter-table-container">
+            <div id="filter-menu">
+                <h2>Filters</h2>
+                <span id="tableCount"></span><br>
+                <label for="new">
+                    <input id="New" onclick="filters('New')" type="checkbox" checked class="filter-options"> New
+                </label><br>
+
+                <label for="Packed">
+                    <input id="Packed" onclick="filters('Packed')" type="checkbox" checked class="filter-options"> Packed
+                </label><br>
+
+                <label for="InTransit">
+                    <input id="InTransit" onclick="filters('InTransit')" type="checkbox" checked class="filter-options"> InTransit
+                </label><br>
+
+                <label for="Delivered">
+                    <input id="Delivered" onclick="filters('Delivered')" type="checkbox" checked class="filter-options"> Delivered
+                </label><br>
+
+            </div>
+
+            <table id="order-page-table">
+                <thead>
+                    <tr>
+                        <td id="id"><b>ID</b></td>
+                        <td id="customer"><b>Customer</b></td>
+                        <td id="date"><b>Date</b></td>
+                        <td id="amount"><b>Amount</b></td>
+                        <td id="status"><b>Status</b></td>
+                    </tr>
+                </thead>
+                <tbody id="order-details">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+<script src="./orders.js"></script>
+</html>

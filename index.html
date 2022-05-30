@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="./index.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <title>Kafene Pharmacy</title>
+</head>
+<body>
+    <header>
+        <span id="logo">
+            <img id="logo-img" src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png" alt="logo"/>
+            <a id="comp-name">Kafene</a>
+        </span>
+        <nav>
+            <a onclick = 'alert("Login to view Orders.")'>Orders</a>
+            <a onclick = 'alert("Login to view Products.")'>Products</a>
+            <a onclick = 'alert("Login to view. Users")'>Users</a>
+        </nav>
+        <button id="logout-btn">Logout</button>
+    </header>
+    <div>
+        <form id="login-form">
+            <h1 id="sign-in-logo">Sign In</h1>
+            <input class = "form-inputs" id="username-input" value="" type="text" placeholder="Enter Username" required/>
+            <input class = "form-inputs" id="password-input" value="" type="password" placeholder="Enter Password" required/>
+            <input id="remember-me" type="checkbox"/> <label>Remember me</label>
+            <button id="login-btn">Login</button>
+        </form>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>
