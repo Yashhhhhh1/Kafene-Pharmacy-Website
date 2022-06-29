@@ -28,7 +28,6 @@ logoutBtn.addEventListener("click", () => {
 })
 
 data = JSON.parse(localStorage.getItem("Products Data"));
-// console.log(data)
 let filterData = data;
 
 
