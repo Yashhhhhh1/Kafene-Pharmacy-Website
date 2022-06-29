@@ -8,25 +8,25 @@ let loginBtn = document.getElementById("login-btn");
 let rememberMeBtn = document.getElementById("remember-me");
 let logoutBtn = document.getElementById("logout-btn")
 
+userNameInput.addEventListener("focus", ()=>{
+    
+    $.get("https://5fc1a1c9cb4d020016fe6b07.mockapi.io/api/v1/orders")
+    .then(res=>{
+        localStorage.setItem("Orders Data", JSON.stringify(res));
+    })
 
-$.get("https://5fc1a1c9cb4d020016fe6b07.mockapi.io/api/v1/orders")
-.then(res=>{
-    localStorage.setItem("Orders Data", JSON.stringify(res));
-})
+    $.get("https://5fc1a1c9cb4d020016fe6b07.mockapi.io/api/v1/products")
+    .then(res=>{
+        localStorage.setItem("Products Data", JSON.stringify(res));
+    })
 
-$.get("https://5fc1a1c9cb4d020016fe6b07.mockapi.io/api/v1/products")
-.then(res=>{
-    localStorage.setItem("Products Data", JSON.stringify(res));
-})
-
-$.get("https://5fc1a1c9cb4d020016fe6b07.mockapi.io/api/v1/users")
-.then(res=>{
-    localStorage.setItem("Users Data", JSON.stringify(res));
+    $.get("https://5fc1a1c9cb4d020016fe6b07.mockapi.io/api/v1/users")
+    .then(res=>{
+        localStorage.setItem("Users Data", JSON.stringify(res));
+    })
 })
 
 var checkLoginStatus = JSON.parse(localStorage.getItem("userCredentials"));
-
-console.log(checkLoginStatus)
 
 if(checkLoginStatus){
     window.open("./orders.html")
@@ -39,12 +39,10 @@ let userDetails = {
 
 userNameInput.addEventListener("input", (e) => {
     userName = e.target.value;
-    console.log(userName, e.target.value)
 })
 
 passwordInput.addEventListener("input", (e) => {
     password = e.target.value;
-    console.log(password, e.target.value)
 })
 
 rememberMeBtn.addEventListener("click", (e) => {
