@@ -29,7 +29,7 @@ userNameInput.addEventListener("focus", ()=>{
 var checkLoginStatus = JSON.parse(localStorage.getItem("userCredentials"));
 
 if(checkLoginStatus){
-    window.open("./orders.html")
+    location.assign("./index.html")
 }
 
 let userDetails = {
